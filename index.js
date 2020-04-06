@@ -23,13 +23,13 @@ function binarySome(numConvertSecond) { // Uses a for loop to convert a decimal 
 
 console.log(binarySome(10));
 
-function binaryAny(numConvertThird) { // Uses a for loop to convert a decimal number to a representative binary string by appending to an empty string.
+function binary(numConvertThird) { // Uses a for loop to convert a decimal number to a representative binary string by appending to an empty string.
     var numBinarySecond = "";
     if (numConvertThird == 0) {
         numBinarySecond = "0";
         return numBinarySecond;
     }
-    for (var i = (Math.ceil(Math.log2(numConvertThird))); i > -1; i--) {
+    for (var i = (Math.ceil(Math.log2(numConvertThird))); i > -1; i--) { // Initializes i as the base 2 logarithm of the argument rounded up.
         if (numConvertThird >= (2 ** i)) {
             numConvertThird -= 2 ** i;
             numBinarySecond += "1";
@@ -40,4 +40,4 @@ function binaryAny(numConvertThird) { // Uses a for loop to convert a decimal nu
     return numBinarySecond;
 }
 
-console.log(binaryAny(10));
+console.log(binary(10));
